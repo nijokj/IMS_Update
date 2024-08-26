@@ -21,10 +21,10 @@ const User = db.user;
 const UserRole = db.user_roles;
 
 // Sync the database and set up initial data
-// db.sequelize.sync({ force: true }).then(() => {
-//   console.log("Drop and Resync Db");
-//   initial(db.sequelize);
-// });
+db.sequelize.sync({ force: true }).then(() => {
+  console.log("Drop and Resync Db");
+  initial(db.sequelize);
+});
 
 // Test route
 app.get("/", (req, res) => {
